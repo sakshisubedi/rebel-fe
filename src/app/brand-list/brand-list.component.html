@@ -1,0 +1,67 @@
+<mat-form-field>
+  <mat-label>Search Brand</mat-label>
+  <input matInput (keyup)="applyFilter($event)" #input>
+</mat-form-field>
+
+<div class="container">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef>
+          BRAND IMAGE
+        </th>
+        <th></th>
+        <td mat-cell *matCellDef="let row; let i = index">
+          <a target="_blank" [href]="brandImages[i%5]['image']">
+            <img mat-card-avatar [src]="brandImages[i%5]['image']"/>
+          </a>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="abv">
+        <th mat-header-cell *matHeaderCellDef>
+          ABV
+        </th>
+        <th></th>
+        <td mat-cell *matCellDef="let row">{{row.abv}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="ibu">
+        <th mat-header-cell *matHeaderCellDef>
+          IBU
+        </th>
+        <th></th>
+        <td mat-cell *matCellDef="let row">{{row.ibu ? row.ibu : '-'}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <th></th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>NAME</th>
+        <th></th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="style">
+        <th mat-header-cell *matHeaderCellDef>STYLE</th>
+        <th></th>
+        <td mat-cell *matCellDef="let row">{{row.style}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="ounces">
+        <th mat-header-cell *matHeaderCellDef>OUNCES</th>
+        <th></th>
+        <td mat-cell *matCellDef="let row">{{row.ounces}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[pageSizeValue]"></mat-paginator>
+  </div>
+</div>
