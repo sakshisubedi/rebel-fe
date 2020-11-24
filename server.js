@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 
 // Serve static files....
+console.log(__dirname + '/dist/rebel-fe');
 app.use(express.static(__dirname + '/dist/rebel-fe'));
 
 // Send all requests to index.html
