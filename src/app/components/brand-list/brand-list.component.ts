@@ -25,20 +25,23 @@ export class BrandListComponent implements OnInit {
     this.getBrandList();
   }
 
-  getBrandList() {
+  getBrandList(): void {
     this.brandServ.getBrandList().subscribe((response: any) => {
       this.brandList = response;
-      console.log(this.brandList);
+      // console.log(this.brandList);
       this.dataSource = new MatTableDataSource(this.brandList);
       this.dataSource.paginator = this.paginator;
-      console.log(this.dataSource);
+    }, (err: any) => {
+      console.log(err);
     });
   }
 
-  getBrandImages() {
+  getBrandImages(): void {
     this.brandServ.getBrandImages().subscribe((response: any) => {
       this.brandImages = response;
-      console.log(this.brandImages);
+      // console.log(this.brandImages);
+    }, (err: any) => {
+      console.log(err);
     });
   }
 
