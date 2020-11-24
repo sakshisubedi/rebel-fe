@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BrandListComponent } from './brand-list/brand-list.component';
+import { BrandListComponent } from './components/brand-list/brand-list.component';
 
 const routes: Routes = [
   {

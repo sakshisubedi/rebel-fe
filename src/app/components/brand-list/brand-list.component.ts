@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { BrandService } from '../services/brand.service';
+import { BrandService } from '../../services/brand.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-import { Brand } from '../interfaces/brand';
+import { Brand } from '../../interfaces/brand';
 
 @Component({
   selector: 'app-brand-list',
