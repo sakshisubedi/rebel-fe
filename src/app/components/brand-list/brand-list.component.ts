@@ -17,6 +17,7 @@ export class BrandListComponent implements OnInit {
   brandList: any[] = [];
   brandImages: any[] = [];
   pageSizeValue: number = 20;
+  isSpin: boolean = false;
 
   constructor(private brandServ: BrandService) { }
 
@@ -31,12 +32,14 @@ export class BrandListComponent implements OnInit {
       // console.log(this.brandList);
       this.dataSource = new MatTableDataSource(this.brandList);
       this.dataSource.paginator = this.paginator;
+      this.isSpin = false;
     }, (err: any) => {
       console.log(err);
     });
   }
 
   getBrandImages(): void {
+    this.isSpin = true;
     this.brandServ.getBrandImages().subscribe((response: any) => {
       this.brandImages = response;
       // console.log(this.brandImages);
