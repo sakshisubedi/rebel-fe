@@ -1,27 +1,30 @@
 # rebel-fe
+Material UI is used to render data in table and search and filter out brand by either using brand name or image or abv or ibu or id or style or ounces.
+## Features
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+- [x] Make an API reqest to fetch brand list and brand images
+- [x] Displayed data in tabular format using material ui
+- [x] Search brand
 
-## Development server
+## UI screenshots
+*Display brand list and its images*
+![brand_list.png](/src/assets/ss/brand_list.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+*Search brand*
+![search_brand.png](/src/assets/ss/search_brand.png)
 
-## Code scaffolding
+## Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Download or clone the git repository
+- `cd [folder-name]`
+- Install the dependencies
+`npm install`
+- Start the app using the command
+`npm start`
+OR
+`ng serve`
+- Once the app is running navigate to `http://localhost:4200`. The app will automatically reload if you change any of the source files.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Production Environment
+The application is deployed in heroku. Production URL is `https://rebel-frontend.herokuapp.com/#/brandList`
