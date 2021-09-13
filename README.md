@@ -27,4 +27,4 @@ OR
 
 
 ## Production Environment
-The application is deployed in heroku. Production URL is `https://rebel-frontend.herokuapp.com/#/brandList`
+The application is deployed in heroku. Production URL is [rebel-fe](https://rebel-frontend.herokuapp.com/#/brandList)
